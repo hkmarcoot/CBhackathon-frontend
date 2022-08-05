@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     async function getlostitem() {
-      await fetch(`${API_URL}/lostitem`)
+      await fetch(`${API_URL}/lostitem`, { referrerPolicy: "no-referrer" })
         .then((res) => {
           if (!res.ok) {
             throw Error("could not fetch the data for for that resourse");
@@ -20,6 +20,7 @@ function App() {
           return res.json();
         })
         .then((data) => {
+          console.log(data);
           setIsPending(false);
           setLostitem(data.payload);
           setError(null);

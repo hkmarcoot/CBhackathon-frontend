@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -18,3 +19,6 @@
 .env.test.local
 .env.production.local
 .env
+=======
+node_modules
+>>>>>>> d063ddaa8f6a598385ba2f764f90539e6d13eb32
