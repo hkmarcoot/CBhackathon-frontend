@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import Cards from "./Cards";
 import "../../styles.css";
 
 const API_URL = "http://localhost:3000";
@@ -33,7 +33,9 @@ function App() {
     getlostitem();
     console.log(lostitem);
   }, []);
-  return <div className="App"></div>;
+  return <><div className="App"> Hello</div>
+  <div><Cards/></div>
+  </>;
 }
 
 export default App;

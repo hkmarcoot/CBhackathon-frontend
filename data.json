@@ -1,0 +1,30 @@
+{
+ 
+    "itemFounder": "Jordan",
+    "item": {
+      "itemName": "Orange Fur Hat",
+      "description": "Winter hat in orange with a brown fur on the top",
+      "picture": "https://img.fruugo.com/product/7/33/181634337_0340_0340.jpg",
+      "foundLocation": {
+        "address": "Corporation Street, Manchester",
+        "lat": "53.485419",
+        "lng": "-2.241880"
+      }
+    },
+    "reply": [
+      {
+        "name": "Amanda",
+        "text": "This hat is mine! Where can I get it back?"
+      },
+      {
+        "name": "Jordan",
+        "text": "Come to the Starbucks next to National Football Museum."
+      }
+    ],
+    "visibility": "PUBLIC",
+    "name": "lost and found item",
+    "id": "mynewId1001",
+    "type": "lostitem"
+  }
+
+ 
