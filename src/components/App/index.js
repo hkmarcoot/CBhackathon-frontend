@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Cards from "./Cards";
+import Cards from "../Cards";
 import "../../styles.css";
 
 const API_URL = "http://localhost:3000";
@@ -9,6 +9,7 @@ function App() {
   const [error, setError] = useState(null);
   const [status, setStatus] = useState("");
   const [isPending, setIsPending] = useState(true);
+
 
   useEffect(() => {
     async function getlostitem() {
@@ -20,9 +21,9 @@ function App() {
           return res.json();
         })
         .then((data) => {
-          console.log(data);
+          //console.log(data);
           setIsPending(false);
-          setLostitem(data.payload);
+          setLostitem(data);
           setError(null);
         })
         .catch((err) => {
@@ -32,11 +33,12 @@ function App() {
         });
     }
     getlostitem();
-    console.log(lostitem);
+    console.log("old" + lostitem);
   }, []);
-  return <><div className="App"> Hello</div>
-  <div><Cards/></div>
-  </>;
+  console.log(lostitem);
+  return (<><div className="titles">LOST AND FOUND</div>
+  <div>{lostitem && <Cards lostitem={lostitem} />}</div>
+  </>);
 }
 
 export default App;

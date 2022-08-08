@@ -1,3 +1,69 @@
-.App {
-  margin: 0;
+.card-container{
+  background-color: antiquewhite;
+  display: flex;
+  margin: 30px;
+  font-size: 1.3rem;
+}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+
+}
+
+.items{
+  padding-left: 12px;
+}
+
+.image{
+  padding: 20px;
+  height: 200px;
+  width: 200px;
+}
+
+.titles{
+
+font-size: 50px;
+font-weight: 550;
+background-color: aquamarine;
+text-align: center;
+padding: 10px;
+position: fixed;
+width: 100%;
+top:0;
+
+}
+
+.result-block{
+
+  margin-top: 100px;
+}
+
+.form{
+  background-color: antiquewhite;
+  display: flex;
+  margin: 30px;
+  width:auto;
+  
+}
+
+.section{
+flex: 1;
+  padding: 20px;
+  background-color: aquamarine;
+}
+
+.lost_title{
+  background-color: blanchedalmond;
+  font-size: 40px;
+font-weight: 550;
+text-align: center;
+padding: 10px;
+flex:1;
+padding-top: 50px;
+}
+
+.reply{
+  align-self: flex-end;
+  align-content: flex-end;
+  margin-left: 90%;
 }
