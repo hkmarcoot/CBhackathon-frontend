@@ -1,0 +1,261 @@
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git pull
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 29 (delta 2), reused 26 (delta 2), pack-reused 0
+Unpacking objects: 100% (29/29), 301.49 KiB | 1.85 MiB/s, done.
+From https://github.com/hkmarcoot/CBhackathon-frontend
+ * [new branch]      master     -> roigin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=roigin/<branch> master
+
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git ^C
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git branch --set-upstream-to=origin/master master
+fatal: branch 'master' does not exist
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git pull origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git remote -v
+roigin  https://github.com/hkmarcoot/CBhackathon-frontend.git (fetch)
+roigin  https://github.com/hkmarcoot/CBhackathon-frontend.git (push)
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git remote add origin https://github.com/hkmarcoot/CBhackathon-frontend.git
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git pull origin master
+From https://github.com/hkmarcoot/CBhackathon-frontend
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git branch --set-upstream-to=origin/master master
+branch 'master' set up to track 'origin/master'.
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git commit -m "First add"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'conukem@plw-uk-conukem.(none)')
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git config --global user.email "chijiokeonukems@gmail.com"
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git config --global user.name "chijioke onukem"
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git commit -m "First add"
+[master 3589f72] First add
+ 11 files changed, 442 insertions(+), 2 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 data.json
+ create mode 100644 src/components/App/Cards.js
+ create mode 100644 src/components/App/image.jpg
+ create mode 100644 src/components/image.jpg
+ create mode 100644 src/images/image.jpg
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git pull
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 7 (delta 3), reused 7 (delta 3), pack-reused 0
+Unpacking objects: 100% (7/7), 628 bytes | 26.00 KiB/s, done.
+From https://github.com/hkmarcoot/CBhackathon-frontend
+   e8d6f13..d063dda  master     -> origin/master
+Auto-merging .gitignore
+CONFLICT (add/add): Merge conflict in .gitignore
+Auto-merging src/components/App/index.js
+CONFLICT (content): Merge conflict in src/components/App/index.js
+Automatic merge failed; fix conflicts and then commit the result.
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master|MERGING)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      .gitignore
+        both modified:   src/components/App/index.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master|MERGING)
+$ git add .
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master|MERGING)
+$ git commit -a
+[master f29f5b4] Merge branch 'master' of https://github.com/hkmarcoot/CBhackathon-frontend
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git log
+commit f29f5b4c7b44de363e09205a1ab7fe4fd349af1e (HEAD -> master)
+Merge: 3589f72 d063dda
+Author: chijioke onukem <chijiokeonukems@gmail.com>
+Date:   Fri Aug 5 13:31:56 2022 +0100
+
+    Merge branch 'master' of https://github.com/hkmarcoot/CBhackathon-frontend
+
+commit 3589f72d8e28b17f23db1c030722c4277277b8a6
+Author: chijioke onukem <chijiokeonukems@gmail.com>
+Date:   Fri Aug 5 13:30:11 2022 +0100
+
+    First add
+
+commit d063ddaa8f6a598385ba2f764f90539e6d13eb32 (origin/master)
+Author: hkmarcoot <59559509+hkmarcoot@users.noreply.github.com>
+Date:   Fri Aug 5 13:26:35 2022 +0100
+
+    solve cors
+
+commit e8d6f13cdd5832b8a7a89329b9064ff28b43d3e0 (roigin/master)
+Author: hkmarcoot <59559509+hkmarcoot@users.noreply.github.com>
+Date:   Fri Aug 5 11:56:33 2022 +0100
+
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git push
+Enumerating objects: 41, done.
+Counting objects: 100% (37/37), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (22/22), 8.85 MiB | 1.78 MiB/s, done.
+Total 22 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 5 local objects.
+To https://github.com/hkmarcoot/CBhackathon-frontend.git
+   d063dda..f29f5b4  master -> master
+
+conukem@plw-uk-conukem MINGW64 ~/OneDrive - Planisware/Desktop/Frontend (master)
+$ git log
+commit f29f5b4c7b44de363e09205a1ab7fe4fd349af1e (HEAD -> master, origin/master)
+Merge: 3589f72 d063dda
+Author: chijioke onukem <chijiokeonukems@gmail.com>
+Date:   Fri Aug 5 13:31:56 2022 +0100
+
+    Merge branch 'master' of https://github.com/hkmarcoot/CBhackathon-frontend
+
+commit 3589f72d8e28b17f23db1c030722c4277277b8a6
+Author: chijioke onukem <chijiokeonukems@gmail.com>
+Date:   Fri Aug 5 13:30:11 2022 +0100
+
+    First add
+
+commit d063ddaa8f6a598385ba2f764f90539e6d13eb32
+Author: hkmarcoot <59559509+hkmarcoot@users.noreply.github.com>
+Date:   Fri Aug 5 13:26:35 2022 +0100
+
+    solve cors
+
+commit e8d6f13cdd5832b8a7a89329b9064ff28b43d3e0 (roigin/master)
+Author: hkmarcoot <59559509+hkmarcoot@users.noreply.github.com>
+Date:   Fri Aug 5 11:56:33 2022 +0100
+
+:...skipping...
+commit f29f5b4c7b44de363e09205a1ab7fe4fd349af1e (HEAD -> master, origin/master)
+Merge: 3589f72 d063dda
+Author: chijioke onukem <chijiokeonukems@gmail.com>
+Date:   Fri Aug 5 13:31:56 2022 +0100
+
+    Merge branch 'master' of https://github.com/hkmarcoot/CBhackathon-frontend
+
+commit 3589f72d8e28b17f23db1c030722c4277277b8a6
+Author: chijioke onukem <chijiokeonukems@gmail.com>
+Date:   Fri Aug 5 13:30:11 2022 +0100
+
+    First add
+
+commit d063ddaa8f6a598385ba2f764f90539e6d13eb32
+Author: hkmarcoot <59559509+hkmarcoot@users.noreply.github.com>
+Date:   Fri Aug 5 13:26:35 2022 +0100
+
+    solve cors
+
+commit e8d6f13cdd5832b8a7a89329b9064ff28b43d3e0 (roigin/master)
+Author: hkmarcoot <59559509+hkmarcoot@users.noreply.github.com>
+Date:   Fri Aug 5 11:56:33 2022 +0100
+
+    add file
+
+commit 686469b170656f8b41a6a6b9cbc9f7f2e6435631
+Author: hkmarcoot <59559509+hkmarcoot@users.noreply.github.com>
+Date:   Fri Aug 5 11:50:55 2022 +0100
+
+    Initial commit
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+commit f29f5b4c7b44de363e09205a1ab7fe4fd349af1e (HEAD -> master, origin/master)
+Merge: 3589f72 d063dda
+Author: chijioke onukem <chijiokeonukems@gmail.com>
+Date:   Fri Aug 5 13:31:56 2022 +0100
+
+    Merge branch 'master' of https://github.com/hkmarcoot/CBhackathon-frontend
+
+commit 3589f72d8e28b17f23db1c030722c4277277b8a6
+Author: chijioke onukem <chijiokeonukems@gmail.com>
+Date:   Fri Aug 5 13:30:11 2022 +0100
+
+    First add
+
+commit d063ddaa8f6a598385ba2f764f90539e6d13eb32
+Author: hkmarcoot <59559509+hkmarcoot@users.noreply.github.com>
+Date:   Fri Aug 5 13:26:35 2022 +0100
+
+    solve cors
+
+commit e8d6f13cdd5832b8a7a89329b9064ff28b43d3e0 (roigin/master)
+Author: hkmarcoot <59559509+hkmarcoot@users.noreply.github.com>
+Date:   Fri Aug 5 11:56:33 2022 +0100
+
+    add file
+
+commit 686469b170656f8b41a6a6b9cbc9f7f2e6435631
+Author: hkmarcoot <59559509+hkmarcoot@users.noreply.github.com>
+Date:   Fri Aug 5 11:50:55 2022 +0100
+
+    Initial commit
